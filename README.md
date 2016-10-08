@@ -1,2 +1,0 @@
-# AlgorithmsBase
-Algorithms base implement.
