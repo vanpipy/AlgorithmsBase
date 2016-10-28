@@ -1,7 +1,5 @@
 'use strict';
 
-const array = [1,2,3,4,5];
-
 // Combinations :: array -> array === [solid, change, iterations];
 function main (combinationArray) {
 
@@ -35,4 +33,4 @@ function main (combinationArray) {
     return combination(combinationArray);
 }
 
-main(array);
+export default main;

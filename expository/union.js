@@ -55,7 +55,7 @@ class UnionFinder {
     }
 
     getSource() {
-        return this.sourceArray.map(d => d.number);
+        return this.sourceArray;
     }
 }
 

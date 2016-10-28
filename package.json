@@ -1,0 +1,30 @@
+{
+  "name": "algorithmsbase",
+  "version": "0.0.1",
+  "description": "algorithm expository",
+  "main": "none",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanpipy/AlgorithmsBase.git"
+  },
+  "keywords": [
+    "algorithm",
+    "expository"
+  ],
+  "author": "vanpipy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vanpipy/AlgorithmsBase/issues"
+  },
+  "homepage": "https://github.com/vanpipy/AlgorithmsBase#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}

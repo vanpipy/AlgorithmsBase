@@ -1,0 +1,6 @@
+# Ignore
+node_modules
+
+# Editor
+*.swp
+*.swp~
