@@ -1,6 +1,8 @@
 'use strict';
 
-const weights = { '+': 1, '-': 1, '*': 2, '/': 2, '(': 3, ')': 3 };
+//F means frozen and T means thaw.
+const weights = { '+': 1, '-': 1, '*': 2, '/': 2, '(': 'F', ')': 'T' };
+let frozen = false, frozenIndex = 0;
 
 /**
  * Flow as below:
@@ -16,6 +18,7 @@ function main (infixString) {
 }
 
 function iter (infixString, stringIndex, resultStack, symbolStack, stackIndex) {
+    //FIXME: The implementation is't natural and its logic out of the Flow, so please fix it.
     if (infixString.length === stringIndex) {
         while (symbolStack.length) {
             resultStack.push( symbolStack.pop() );
@@ -23,7 +26,9 @@ function iter (infixString, stringIndex, resultStack, symbolStack, stackIndex) {
 
         return resultStack.join('');
     } else {
-        compare(isCharacter, infixString[stringIndex])(resultLoader(resultStack), symbolLoader(symbolStack, resultStack));
+        if (infixString[stringIndex] !== ' ') {
+            compare(isCharacter, infixString[stringIndex])(resultLoader(resultStack), symbolLoader(symbolStack, resultStack));
+        }
         return iter(infixString, stringIndex + 1, resultStack, symbolStack, stackIndex);
     }
 }
@@ -48,6 +53,30 @@ function resultLoader (stack) {
 
 function symbolLoader (stack, result) {
     return (string) => {
+        //Diff '(a + b) * 10' to 'a + b * 10'.
+        if (string === '(') {
+            frozen = true;
+            frozenIndex = stack.length;
+            return;
+        }
+
+        if (string === ')') {
+            frozen = false;
+            result.push( stack.pop() );
+            return;
+        }
+
+        if (frozen) {
+            if (stack.length > frozenIndex) {
+                result.push( stack.pop() );
+                stack.push(string);
+            } else {
+                stack.push(string);
+            }
+
+            return;
+        }
+
         if (stack.length > 0) {
             const current = weights[string];
             const lastest = weights[ stack[stack.length - 1] ];
