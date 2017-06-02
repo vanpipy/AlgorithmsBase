@@ -32,9 +32,4 @@ function exchange (originArray, leftMark, rightMark) {
     originArray[rightMark] = temp;
 }
 
-const arr = [40,4,56,7,32,42,10,2,100];
-
-console.log(arr);
-console.log(qSort(arr));
-
-//export default qSort;
+export default qSort;

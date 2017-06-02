@@ -40,7 +40,4 @@ function compare (x, y) {
     return result;
 }
 
-const rs = main('Hello bitch', 'lloeH bchit');
-console.info(rs);
-
 module.exports = main;
