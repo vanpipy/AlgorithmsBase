@@ -1,6 +1,6 @@
 'use strict';
 
-function map (array, todo) {
+function map (todo, array) {
     let i = 0;
     let len = array.length;
     let _array = Array(len);
@@ -14,4 +14,4 @@ function map (array, todo) {
     return _array;
 }
 
-export default map;
+module.exports = map;
