@@ -1,5 +1,12 @@
 'use strict';
 
+/*
+ * whether 'xxxxx' is the subanagram of 'xxxxx';
+ *
+ * @example
+ * main('xxxxx', 'xxxxx') => boolean;
+ */
+
 //It also equal to [0] * 26.
 const letterArray = 'abcdefghijklmnopqrstuvwxyz'.split('').map(d => 0);
 const startCode = 'a'.charCodeAt();
