@@ -43,4 +43,17 @@ describe('binarySearch', () => {
         expect(binarySearch(testArray, -99)).to.equal(false);
         expect(binarySearch(testArray, -999)).to.equal(false);
     });
+
+    it('should be false when empty list', () => {
+        expect(binarySearch([], -10000)).to.equal(false);
+        expect(binarySearch([], -1000)).to.equal(false);
+        expect(binarySearch([], -100)).to.equal(false);
+        expect(binarySearch([], -10)).to.equal(false);
+        expect(binarySearch([], 0)).to.equal(false);
+        expect(binarySearch([], 9)).to.equal(false);
+        expect(binarySearch([], 10)).to.equal(false);
+        expect(binarySearch([], 100)).to.equal(false);
+        expect(binarySearch([], 1000)).to.equal(false);
+        expect(binarySearch([], 10000)).to.equal(false);
+    });
 });
