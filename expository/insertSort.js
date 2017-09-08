@@ -12,7 +12,7 @@
  * [26, 54, 93, 17, 77, 31, 44, 55, 20]
  *                  |
  *                  V
- * [17, 26, 54, 93, , 77, 31, 44, 55, 20]
+ * [17, 26, 54, 93, 77, 31, 44, 55, 20]
  *
  * @analysis
  * There is two part for a list, one is unordered and another is ordered.
