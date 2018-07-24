@@ -1,5 +1,5 @@
 # AlgorithmsBase
-Algorithms base implement.
+Algorithms base implementation.
 
 # The insides
 [Combination](./expository/combination.js)
@@ -11,6 +11,6 @@ Algorithms base implement.
 
 3.The edge of program's input.
 
-The point 1, 2 is required and easy to test.
+The points 1 & 2 are required and easy to test.
 
-Point 3 is funny to explore, but something easy to find is still obviously. Example like making 100 or 1000 inputs to test or even more. The important of edge input is variety and need time to find it but it still funny like the beginning of this pragraph said.
+Point 3 is funny to explore, but something easy to find is still obvious. For example, like making 100 or 1000 inputs to test or even more. The importance of edge input is variety and needs time to find it but it's still funny like the beginning of this pragraph said.
