@@ -4,7 +4,7 @@
  * whether 'xxxxx' is the subanagram of 'xxxxx';
  *
  * @example
- * main('xxxxx', 'xxxxx') => boolean;
+ * main('earth', 'heart') => true;
  */
 
 //It also equal to [0] * 26.
